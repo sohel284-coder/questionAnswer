@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+{% block style %}
+<style>
+    html,
+    body {
+        height: 100%;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .login-form-container {
+        width: 350px;
+        margin: auto;
+    }
+
+    .registration-form-container {
+        width: 400px;
+        margin: auto;
+    }
+
+    .outer-area {
+        margin-top: 100px;
+        width: 600px;
+
+        border: solid 1px rgb(196, 220, 228);
+        box-shadow: 0px 3px 6px rgb(196, 220, 228);
+        box-sizing: border-box;
+        border-radius: 10px;
+        transform: scale(1.09);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<center>
+    <div class="outer-area card py-4">
+        <div class="auth-box text-center">
+            {% block auth %}
+            {% endblock auth %}
+        </div>
+    </div>
+</center>
+{% endblock %}
