@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    
+    <link  href="{% static 'bundle.css' %}">
+
 
     {% block style %}
     {% endblock  %}
@@ -18,9 +22,12 @@
 
     {% block content %}
     {% endblock content %}
+    
+    <script src="{% static 'bundle.js' %}"></script>
 
     {% block js %}
     {% endblock %}
+
     
 </body>
 </html>
